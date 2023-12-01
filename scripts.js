@@ -103,7 +103,7 @@ generateTeamMembers();
 
 // Add the following function to calculate the countdown
 function updateCountdown() {
-    const launchDate = new Date('June 1, 2024 00:00:00 GMT+0000').getTime();
+    const launchDate = new Date('July 1, 2024 00:00:00 GMT+0000').getTime();
     const currentDate = new Date().getTime();
     const timeDifference = launchDate - currentDate;
 

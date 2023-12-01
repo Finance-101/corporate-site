@@ -175,7 +175,6 @@ section h2 {
     border-bottom: 1px solid #ccc;
 }
 
-
 .team-member-info {
     padding: 20px;
     flex-grow: 1;
@@ -190,8 +189,8 @@ section h2 {
     }
 
     #team-picture {
-        height: auto; /* Adjust the team picture height for smaller screens */
-        max-width: 80%; /* Adjust the team picture width for smaller screens */
+        height: auto;
+        max-width: 95%;
         margin-bottom: 10px;
     }
 
@@ -201,6 +200,10 @@ section h2 {
 
     .team-member-info {
         padding: 0.625rem;
+    }
+
+    .team-member img {
+        max-width: 80%;
     }
 }
 
