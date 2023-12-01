@@ -228,3 +228,47 @@ footer {
     height: 30px;
     width: 30px;
 }
+
+.countdown {
+    background-color: #F8F9FA;
+    padding: 30px;
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+}
+
+.countdown h2 {
+    color: #091B2C;
+    margin-bottom: 2rem;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.countdown-item span:last-child {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.launch-date {
+    font-size: 1.5rem;
+    color: #3f0202;
+    margin-top: 1rem;
+}
