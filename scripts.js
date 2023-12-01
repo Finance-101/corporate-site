@@ -13,8 +13,11 @@ function removeLoadingScreen() {
     setTimeout(() => {
         loadingScreen.style.display = 'none';
         
-        // Scroll to the top of the page
-        window.scrollTo(0, 0);
+        // Scroll to the top of the page with smooth animation
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }, 1000); // Adjust the timeout based on your transition duration
 }
 
@@ -37,7 +40,7 @@ function generateTeamMembers() {
         { name: 'Ana Catarina Alves', role: 'External Relations Responsible', email: 'acras@iscte-iul.pt', image: 'ana-alves.jpeg' },
         { name: 'Aadil Sidik', role: 'Full Stack Developer', email: 'aimsk@iscte-iul.pt', image: 'aadil-sidik.jpeg' },
         { name: 'Filipe Silva', role: 'Product Owner', email: 'fnasa@iscte-iul.pt', image: 'filipe-silva.jpeg' },
-        { name: 'João Ferro', role: 'Project Manager', email: 'jmsfo@iscte-iul.pt', image: 'joao-ferro.jpg  ' },
+        { name: 'João Ferro', role: 'Project Manager', email: 'jmsfo@iscte-iul.pt', image: 'joao-ferro.jpg' },
         { name: 'Luis Carlés', role: 'Quality Assurance', email: 'larcs@iscte-iul.pt', image: 'luis-carles.jpeg' },
         { name: 'Mário Cao', role: 'Backend Developer', email: 'macco2@iscte-iul.pt', image: 'mario-cao.jpeg' }
     ];
@@ -75,6 +78,23 @@ function generateTeamMembers() {
         card.appendChild(info);
 
         teamGrid.appendChild(card);
+    });
+
+    // Scroll smoothly to a section when a navigation link is clicked
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 }
 
