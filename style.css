@@ -78,14 +78,16 @@ section h2 {
 
 @media (max-width: 768px) {
     section {
-        margin: auto;
         width: 90%;
         padding: 20px;
     }
 
     header {
-        padding: 10px;
         height: 6rem;
+    }
+
+    header img {
+        height: 5rem;
     }
 }
 
@@ -180,15 +182,17 @@ section h2 {
     justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .team-content {
-        width: 90%;
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member img {
+        height: 15rem;
+    }
+
+    .team h2 {
+        margin-bottom: 1rem;
     }
 
     .team-member-info {
@@ -271,4 +275,15 @@ footer {
     font-size: 1.5rem;
     color: #3f0202;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .countdown h2 {
+        margin-bottom: 1rem;
+    }
 }
