@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="scripts.js"></script>
     <title>Finance 101</title>
 </head>
 <body>
 
-    <!-- Sidebar with hamburger menu -->
-    <div class="sidebar">
-        <div class="hamburger-menu" onclick="toggleSidebar()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <!-- Add other sidebar content here -->
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
     </div>
 
     <!-- Main content -->
     <div class="main-content">
         <header>
+            <div class="hamburger-menu" onclick="toggleSidebar()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <img src="assets/finance101.svg" alt="Finance 101 Logo">
-            <h1>Hello world! Finance 101</h1>
-        </header>
+        </header>        
 
         <!-- Story Section -->
-        <section class="story">
-            <p>Finance 101 started in early September 2023 when a group of students was challenged to create an innovative project. We decided to create a real solution to a real problem, and thus, the Finance 101 project was born.</p>
+        <section class="story" id="design">
+            <h2>Our Story</h2>
+            <p>Welcome to Finance 101, where innovation meets financial education. In September 2023, a group of students embarked on a journey to create a real solution to a real problem. Thus, the Finance 101 project was born.</p>
         </section>
 
         <!-- Vision Section -->
         <section class="vision">
-            <h2>Vision</h2>
-            <p>We aspire to create a society where financial literacy is a universal competence. We envision a future where every Portuguese, regardless of their background, age, or location, has easy access to solid financial knowledge and understands the complexities of the economic world. By empowering contemporary young minds with the necessary tools to make informed financial decisions, we are building a more stable, prosperous, and equitable tomorrow for everyone in Portugal.</p>
+            <h2>Our Vision</h2>
+            <p>We envision a future where financial literacy is universal. Regardless of background or location, every individual should have easy access to solid financial knowledge. By empowering minds with the tools for informed decisions, we strive to build a stable, prosperous, and equitable tomorrow for all.</p>
         </section>
 
         <!-- Mission Section -->
-        <section class="mission">
-            <h2>Mission</h2>
-            <p>Empower the Future: At Finance 101, we are dedicated to revolutionizing financial education for the Portuguese. Our mission is to create an intuitive web application, filled with interactive learning paths, quizzes, and gamified experiences. We aim to make the complex world of finance and economics accessible, enjoyable, and fun, fostering a financially literate generation prepared for a prosperous future.</p>
+        <section class="mission" id="about">
+            <h2>Our Mission</h2>
+            <p>Empowering the Future: We revolutionize financial education for the Portuguese. Our intuitive web application, filled with interactive learning paths and gamified experiences, aims to make the complex world of finance enjoyable. Join us in fostering a financially literate generation prepared for a prosperous future.</p>
         </section>
     </div>
 
