@@ -176,7 +176,6 @@ section ul li {
 }
 
 section ul li:before {
-    content: '\2022';
     color: #333;
     font-size: 1.5em;
     position: absolute;
