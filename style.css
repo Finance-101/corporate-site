@@ -126,6 +126,65 @@ section h2 {
     100% { transform: rotate(360deg); }
 }
 
+/* Our Values Section */
+.values {
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+}
+
+.values h2 {
+    color: #091B2C;
+    margin-bottom: 2rem;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.values li {
+    margin: 0 20px 20px 20px;
+    padding: 15px;
+    background-color: #3EE3A9;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.values li:hover {
+    background-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .values {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .values h2 {
+        margin-bottom: 1rem;
+    }
+
+    .values li {
+        margin: 0 10px 10px 10px;
+        padding: 10px;
+    }
+}
+
+
+/* Contact Section */
+
 .contact {
     text-align: center;
     margin: auto;
