@@ -15,12 +15,25 @@ body.loading {
 body::-webkit-scrollbar {
     width: 12px;
     transition: all 0.5s ease;
+    border-radius: 6px;
 }
 
 body::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-track {
     background-color: #F8F9FA;
     transition: background-color 0.5s ease;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2E7D32;
+    transition: background-color 0.5s ease;
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #F8F9FA;
+    transition: background-color 0.5s ease;
+    border-radius: 6px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
