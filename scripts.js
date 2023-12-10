@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const fullscreenButton = document.getElementById("fullscreenButton");
+    const videoIframe = document.querySelector(".video-section iframe");
+
+    if (fullscreenButton && videoIframe) {
+        fullscreenButton.addEventListener("click", function () {
+            if (videoIframe.requestFullscreen) {
+                videoIframe.requestFullscreen();
+            } else if (videoIframe.mozRequestFullScreen) {
+                videoIframe.mozRequestFullScreen();
+            } else if (videoIframe.webkitRequestFullscreen) {
+                videoIframe.webkitRequestFullscreen();
+            } else if (videoIframe.msRequestFullscreen) {
+                videoIframe.msRequestFullscreen();
+            }
+
+            // Start playing the video
+            if (videoIframe.contentWindow) {
+                videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     const colorGrid = document.getElementById("colorGrid");
     const colors = colorGrid.querySelectorAll(".color");
 
