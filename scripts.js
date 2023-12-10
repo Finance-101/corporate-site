@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const colorGrid = document.getElementById("colorGrid");
+    const colors = colorGrid.querySelectorAll(".color");
+
+    colors.forEach((color) => {
+        const bgColor = getComputedStyle(color).getPropertyValue("background-color");
+        const textColor = getContrastColor(bgColor);
+        color.style.color = textColor;
+    });
+
+    function getContrastColor(color) {
+        const rgb = color.match(/\d+/g);
+        const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+        return brightness >= 128 ? "#000" : "#fff";
+    }
+});
+
 // Function to remove the loading screen and show the main content
 function removeLoadingScreen() {
     const loadingScreen = document.querySelector('.loading-screen');
@@ -30,7 +47,7 @@ setTimeout(() => {
 }, 0);
 
 // Set a timeout to remove the loading screen after 2.5 seconds
-setTimeout(removeLoadingScreen, 2500);
+setTimeout(removeLoadingScreen, 1000);
 
 // Function to generate team member cards
 function generateTeamMembers() {
